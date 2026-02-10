@@ -1,6 +1,30 @@
 # Changelog
 
 
+## [2026-02-10] — Changes `a94886b` to `d0932b5`
+
+### 🐛 Bug Fixes
+- fix: switch to Entra ID token auth + fix encoding in subprocess calls
+
+### 📦 Other
+- Merge pull request #14 from MarziZadeh/feature/marzi
+
+<details><summary>Files changed</summary>
+
+```
+ agents/chaos_visualizer.py | 6 +++---
+ agents/commit_whisperer.py | 4 ++--
+ agents/repo_copilot.py     | 2 +-
+ config.py                  | 8 +++++++-
+ 4 files changed, 13 insertions(+), 7 deletions(-)
+```
+</details>
+
+---
+
+
+
+
 ## [2026-02-10] — Changes `eb78981` to `67d7276`
 
 ### 📦 Other
