@@ -1,6 +1,43 @@
 # Changelog
 
 
+## [2026-02-10] — Merge PRs #18, #19, #20 to main
+
+### 🆕 New Features
+- **agent.py, tools.py** — Migrate main agent from Azure AI to Ollama for local, private execution
+- **tools.py** — Add `roast_agents` tool for comedy roasts of the agent team
+- **swarm_mascot.py** — Add Finding Nemo ASCII art gallery with 7 ocean-themed pieces
+- **sharkbait/** — Agent Sharkbait code review agent with Tank Gang commentary
+- **ComedyArena/** — Switch Comedy Arena from OpenAI to Azure OpenAI
+
+### 📝 Documentation
+- **README.md** — Add comprehensive ASCII agent swarm architecture diagram
+- **README.md** — Expand with multi-agent orchestration system documentation
+- **ComedyArena/README.md** — Update for Azure OpenAI configuration
+- **sharkbait/README.md** — Add Agent Sharkbait documentation
+
+### ⚙️ Configuration
+- **.env.example** — Replace Azure AI config with Ollama configuration
+- **.github/copilot-instructions.md** — Add Beth agent system and IDEO Design Thinking workflow
+- **.gitignore** — Add venv/ to ignore list
+- **ComedyArena/.env.example** — Replace OpenAI key with Azure OpenAI settings
+
+### 🔧 Changes
+- **requirements.txt** — Update dependencies for Ollama (httpx instead of azure-ai-inference)
+
+<details><summary>Merged Pull Requests</summary>
+
+- PR #18: feat: switch Comedy Arena to Azure OpenAI (by lshade)
+- PR #19: feat: add ASCII agent swarm diagram and migrate to Ollama (by stephschofield)
+- PR #20: feat: add Finding Nemo ASCII art gallery (by ZacharyLuz)
+
+</details>
+
+---
+
+
+
+
 ## [2026-02-10] — Changes `555f346` to `412432e`
 
 ### 🆕 New Features
