@@ -1,47 +1,86 @@
-# AlltheVibes-WildHackathon
+# 🐠 All the Vibes Agent Swarm 🐠
 
-Automated documentation engine that keeps your README and CHANGELOG in sync with every change in the repo — powered by GitHub Copilot skills, prompts, and GitHub Actions.
+```
+                                        ,.
+                                      ,o'
+                                     :o'
+                 _....._            ``::o
+               .'       ``-.         `':oo
+              /   __       `.        ::oo'
+             |   /  \        |      ::ooo
+             |   `._;        |     ::ooo'
+             \     ;  ,.     /    ::ooo;
+              `.   ``'  `. .'   ,::ooo;
+         _      ``--.....::'   ::ooooo;
+       .` `.             `.  ,::ooooo;
+      /     `.             `::ooooooo;
+     :        `.            `::oooooo;
+     ;     `:  `._     _..-- ::ooooo;
+     :      `. `-.`_.-'   /  ::ooo;'
+      `.     :`..__  _.-'   ,::o;``
+        `.  ;    ``-'      ,::;``
+          `-.             ,:;``
+             `-.        .:'
+                `-.   .-'
+        _._      ) .-'
+      .'   ``--.'  /
+     /             /
+    ;  JUST KEEP  ;
+    |  PUSHING!   |
+    ;             ;
+     `.         .'
+       `-.__.-'
+
+        🐠  "Just keep pushing, just keep pushing..."  🐠
+             — Nemo (probably), Agent Swarm Edition
+```
+
+> An automated documentation engine + chaotic agent swarm toolkit — powered by GitHub Copilot skills, prompts, and GitHub Actions.
+
+---
+
+## What is the All the Vibes Agent Swarm?
+
+This is a **collaborative, rapid-fire AI hackathon repo** where everyone contributes agents, skills, utilities, and experiments to a shared "agent swarm." There are no rules — just vibes.
+
+The repo includes:
+- **An automated documentation engine** that keeps README and CHANGELOG in sync on every push
+- **A Copilot skill** that teaches Copilot how to analyze diffs and write changelogs
+- **Fun swarm tools** like the Vibe Oracle and ASCII Swarm Mascot
+- Whatever else the swarm decides to build
+
+---
 
 ## Quick Start
 
-1. **Clone the repo:**
-   ```bash
-   git clone https://github.com/shyamsridhar123/AlltheVibes-WildHackathon.git
-   cd AlltheVibes-WildHackathon
-   ```
+```bash
+# Clone the repo
+git clone https://github.com/shyamsridhar123/AlltheVibes-WildHackathon.git
+cd AlltheVibes-WildHackathon
 
-2. **Make changes** to any file in the repo.
+# See the swarm mascot
+python swarm_mascot.py
 
-3. **Generate documentation** using one of these methods:
+# Consult the Vibe Oracle
+python vibe_oracle.py "what should I build?"
 
-   - **Copilot Prompt (recommended):** Open the command palette, run the `generate-change-readme` prompt, and Copilot will analyze your changes and update the changelog.
-   
-   - **Automatic (on push):** Push to `main` and the GitHub Action will auto-generate a changelog entry.
-
-## Project Structure
-
-```
-AlltheVibes-WildHackathon/
-├── .github/
-│   ├── copilot-instructions.md          # Global Copilot behavior rules
-│   ├── instructions/
-│   │   ├── changelog-format.instructions.md  # Changelog formatting rules
-│   │   └── readme-update.instructions.md     # README update rules
-│   ├── prompts/
-│   │   ├── generate-change-readme.prompt.md  # Generate changelog from changes
-│   │   ├── generate-full-readme.prompt.md    # Generate a full README
-│   │   └── summarize-changes.prompt.md       # Summarize changes since last entry
-│   └── workflows/
-│       └── auto-readme.yml                   # GitHub Action for auto-changelog
-├── .vscode/
-│   └── skills/
-│       └── readme-changelog-generator/
-│           └── SKILL.md                      # Copilot skill definition
-├── CHANGELOG.md                              # Auto-generated changelog
-└── README.md                                 # This file
+# Make changes, push, repeat every 5 minutes 🐠
 ```
 
-## How It Works
+---
+
+## 🔮 What's in the Swarm
+
+| Contribution | Author | Description | Run it |
+|---|---|---|---|
+| 📝 Auto-Changelog Engine | dc995 | Copilot skill + GitHub Action that auto-generates CHANGELOG.md on every push | Automatic on push to `main` |
+| 🔮 Vibe Oracle | ZacharyLuz | Chaotic vibe generator — ask it anything, receive cosmic wisdom | `python vibe_oracle.py "your question"` |
+| 🐝 Swarm Mascot | ZacharyLuz | ASCII art mascot + banner for the swarm | `python swarm_mascot.py` |
+| 🐠 Nemo README | ZacharyLuz | This README with Nemo ASCII art and contribution guide | You're reading it |
+
+---
+
+## How the Auto-Documentation Works
 
 ### Copilot Skill
 The skill in `.vscode/skills/readme-changelog-generator/SKILL.md` teaches Copilot how to:
@@ -57,13 +96,6 @@ The skill in `.vscode/skills/readme-changelog-generator/SKILL.md` teaches Copilo
 | `summarize-changes` | Finds all changes since the last changelog entry |
 | `generate-full-readme` | Creates a complete README from the current repo state |
 
-### Instructions
-| File | Scope |
-|------|-------|
-| `copilot-instructions.md` | Global rules for all Copilot interactions in this repo |
-| `changelog-format.instructions.md` | Formatting rules applied when editing CHANGELOG.md |
-| `readme-update.instructions.md` | Rules applied when editing README.md |
-
 ### GitHub Action
 On every push to `main`, the workflow:
 1. Reads the commit messages and diff
@@ -72,16 +104,71 @@ On every push to `main`, the workflow:
 4. Prepends it to `CHANGELOG.md`
 5. Commits and pushes the update
 
+---
+
+## Project Structure
+
+```
+AlltheVibes-WildHackathon/
+├── .github/
+│   ├── copilot-instructions.md              # Global Copilot behavior rules
+│   ├── instructions/
+│   │   ├── changelog-format.instructions.md # Changelog formatting rules
+│   │   └── readme-update.instructions.md    # README update rules
+│   ├── prompts/
+│   │   ├── generate-change-readme.prompt.md # Generate changelog from changes
+│   │   ├── generate-full-readme.prompt.md   # Generate a full README
+│   │   └── summarize-changes.prompt.md      # Summarize changes since last entry
+│   └── workflows/
+│       └── auto-readme.yml                  # GitHub Action for auto-changelog
+├── .vscode/
+│   └── skills/
+│       └── readme-changelog-generator/
+│           └── SKILL.md                     # Copilot skill definition
+├── CHANGELOG.md                             # Auto-generated changelog
+├── README.md                                # This file (you are here 🐠)
+├── swarm_mascot.py                          # ASCII swarm mascot
+└── vibe_oracle.py                           # Chaotic vibe generator
+```
+
+---
+
+## How to Contribute
+
+### 1. Get the repo
+```bash
+git clone https://github.com/shyamsridhar123/AlltheVibes-WildHackathon.git
+```
+Or fork it: `gh repo fork shyamsridhar123/AlltheVibes-WildHackathon --clone`
+
+### 2. Build anything
+- ✅ Agents, skills, utilities, experiments, partial ideas, vibes
+- ❌ Nothing is off limits. No required tech stack or language.
+
+### 3. Push fast
+> **Push something every ~5 minutes.** Speed over polish.
+
+### 4. Push or PR
+- **Direct push** to `main` if you have access (no branch protection)
+- **Fork + PR** if you don't — Copilot auto-approves
+
+### 5. Don't overthink it
+No coding standards. No linting rules. No cleanup expectations. Just vibes.
+
+---
+
 ## Recent Changes
 
-See [CHANGELOG.md](CHANGELOG.md) for a full history of changes.
+See [CHANGELOG.md](CHANGELOG.md) for the full auto-generated history.
 
-## Contributing
-
-1. Use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
-2. After making changes, run the `generate-change-readme` Copilot prompt to update docs.
-3. The GitHub Action will also auto-update on push to `main`.
+---
 
 ## License
 
 MIT
+
+---
+
+```
+   🐠 Just keep pushing. Just keep pushing. 🐠
+```
