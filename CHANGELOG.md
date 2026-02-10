@@ -1,7 +1,35 @@
 # Changelog
 
 
-# Changelog
+## [2026-02-10] — Changes `5277c94` to `2010742`
+
+### 🐛 Bug Fixes
+- fix: resolve merge conflict in CHANGELOG.md
+
+### 📝 Documentation
+- docs: auto-update changelog and readme [skip ci]
+
+### 📦 Other
+- Merge pull request #12 from ZacharyLuz/main - CHAOS UPGRADE: animated mascot, turbo oracle, swarm chaos engine
+- 🌀 CHAOS UPGRADE: animated mascot, turbo oracle, swarm chaos engine
+
+<details><summary>Files changed</summary>
+
+```
+ CHANGELOG.md    |  22 +++++++
+ swarm_chaos.py  | 178 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ swarm_mascot.py | 161 +++++++++++++++++++++++++++++++++++++++++++++++---
+ vibe_oracle.py  | 112 ++++++++++++++++++++++++++++++++---
+ 4 files changed, 457 insertions(+), 16 deletions(-)
+```
+</details>
+
+---
+
+
+
+
+
 
 
 ## [2026-02-10] — Changes `16cd0a7` to `bac7f23`
