@@ -1,6 +1,28 @@
 # Changelog
 
 
+## [2026-02-10] — Changes `a8fb3b1` to `9f58793`
+
+### 📝 Documentation
+- docs: integrate MacGyver agent across README and copilot-instructions
+
+### 📦 Other
+- Merge pull request #30 from datorresb/feat/macgyver-docs
+
+<details><summary>Files changed</summary>
+
+```
+ .github/copilot-instructions.md |  6 +++++-
+ README.md                       | 25 ++++++++++++++++++-------
+ 2 files changed, 23 insertions(+), 8 deletions(-)
+```
+</details>
+
+---
+
+
+
+
 ## [2026-02-10] — Changes `ce9cc7b` to `bc2b103`
 
 ### 🆕 New Features
