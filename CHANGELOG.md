@@ -1,6 +1,30 @@
 # Changelog
 
 
+## [2026-02-10] — Changes `16cd0a7` to `bac7f23`
+
+### 🆕 New Features
+- feat: add Comedy Arena - multi-agent joke battle with LLM-as-a-Judge evaluation
+
+### 📦 Other
+- Merge pull request #13 from lshade/feature/knock-knock
+
+<details><summary>Files changed</summary>
+
+```
+ ComedyArena/.env.example     |   2 +
+ ComedyArena/README.md        | 118 +++++++++++++++++++
+ ComedyArena/comedy_arena.py  | 261 +++++++++++++++++++++++++++++++++++++++++++
+ ComedyArena/requirements.txt |   2 +
+ 4 files changed, 383 insertions(+)
+```
+</details>
+
+---
+
+
+
+
 ## [2026-02-10] — Changes `a94886b` to `d0932b5`
 
 ### 🐛 Bug Fixes
