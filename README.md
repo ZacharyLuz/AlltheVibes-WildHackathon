@@ -1,4 +1,4 @@
-# AlltheVibes-WildHackathon
+﻿# AlltheVibes-WildHackathon
 
 AI Agent running **locally** via **Ollama** — no API keys, no cloud, fully private — backed by a **multi-agent orchestration system** for GitHub Copilot.
 

@@ -1,6 +1,69 @@
 # Changelog
 
 
+## [2026-02-11] — Changes `937d112` to `e5b7a12`
+
+### 📦 Other
+- Refresh README with repo research and quick-start guidance (#33)
+
+<details><summary>Files changed</summary>
+
+```
+ Backlog.md | 13 +++++----
+ README.md  | 96 ++++++++++++++++++++++++++++++++++++++++++++++++--------------
+ 2 files changed, 81 insertions(+), 28 deletions(-)
+```
+</details>
+
+---
+
+
+
+
+## [2026-02-11] — Changes `abf9ada` to `067e370`
+
+### 📦 Other
+- Deep code review of agentic capabilities with security fixes (#34)
+
+<details><summary>Files changed</summary>
+
+```
+ CHANGELOG.md                 |  19 ++
+ agents/router.py             |   4 +-
+ config.py                    |  31 +--
+ docs/AGENTIC_CODE_REVIEW.md  | 441 +++++++++++++++++++++++++++++++++++++++++++
+ src/agents/BaseAgent.test.ts |  28 ++-
+ src/agents/BaseAgent.ts      |   2 +-
+ src/agents/WorkerAgent.ts    |   3 +-
+ tools.py                     |  43 ++++-
+ 8 files changed, 536 insertions(+), 35 deletions(-)
+```
+</details>
+
+---
+
+
+
+
+## [2026-02-11] — Deep code review of agentic capabilities with security fixes
+
+### 🐛 Bug Fixes
+- **tools.py** — Harden shell command blocklist with case-insensitive matching and broader dangerous pattern coverage
+- **tools.py** — Add path traversal protection to `read_file` (restrict to project directory)
+- **tools.py** — Add path traversal protection and sensitive file blocking to `write_file`
+- **config.py** — Implement API key fallback that was documented but not coded
+- **config.py** — Add error handling to `chat()` to prevent unhandled crashes
+- **agents/router.py** — Fix code_reviewer routing to execute the agent instead of printing a tip
+- **src/agents/BaseAgent.ts** — Fix `Task` import to reference `types/task.ts` instead of non-existent export in `types/agent.ts`
+- **src/agents/WorkerAgent.ts** — Fix `Task` import to reference `types/task.ts`
+- **src/agents/BaseAgent.test.ts** — Fix Task objects to use proper `createTask()` factory and add missing `enabled` field to capabilities
+
+### 📝 Documentation
+- **docs/AGENTIC_CODE_REVIEW.md** — Add comprehensive code review of all agentic capabilities with security findings and architecture recommendations
+
+---
+
+
 ## [2026-02-11] — Changes `bb07da2` to `f48125b`
 
 ### 🆕 New Features
