@@ -30,7 +30,9 @@ This repository uses an automated README/Changelog generation skill to document 
 | `README.md` | Project overview and current state |
 | `CHANGELOG.md` | Chronological record of all changes |
 | `.github/workflows/auto-readme.yml` | GitHub Action for automated README updates |
-| `.vscode/skills/readme-changelog-generator/SKILL.md` | Copilot skill definition |
+| `.github/prompts/enable-star-wars-agents.prompt.md` | Prompt to activate Star Wars agent personalities |
+| `.vscode/skills/readme-changelog-generator/SKILL.md` | Changelog generation skill definition |
+| `.vscode/skills/star-wars-agent-personality/SKILL.md` | Star Wars agent personality skill definition |
 
 ## Change Documentation Standards
 - Each changelog entry must include the **date**, **commit range**, and **categorized list of changes**.

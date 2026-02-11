@@ -28,6 +28,7 @@ AlltheVibes-WildHackathon/
 │   │   ├── changelog-format.instructions.md  # Changelog formatting rules
 │   │   └── readme-update.instructions.md     # README update rules
 │   ├── prompts/
+│   │   ├── enable-star-wars-agents.prompt.md # Enable Star Wars agent personalities
 │   │   ├── generate-change-readme.prompt.md  # Generate changelog from changes
 │   │   ├── generate-full-readme.prompt.md    # Generate a full README
 │   │   └── summarize-changes.prompt.md       # Summarize changes since last entry
@@ -35,20 +36,33 @@ AlltheVibes-WildHackathon/
 │       └── auto-readme.yml                   # GitHub Action for auto-changelog
 ├── .vscode/
 │   └── skills/
-│       └── readme-changelog-generator/
-│           └── SKILL.md                      # Copilot skill definition
+│       ├── readme-changelog-generator/
+│       │   └── SKILL.md                      # Changelog generation skill
+│       └── star-wars-agent-personality/
+│           └── SKILL.md                      # Star Wars personality skill
 ├── CHANGELOG.md                              # Auto-generated changelog
-└── README.md                                 # This file
+├── README.md                                 # This file
+├── swarm_mascot.py                           # ASCII art mascot
+└── vibe_oracle.py                            # Chaotic vibe generator
 ```
 
 ## How It Works
 
-### Copilot Skill
+### Copilot Skills
+
+#### README/Changelog Generator
 The skill in `.vscode/skills/readme-changelog-generator/SKILL.md` teaches Copilot how to:
 - Analyze git diffs and commit messages
 - Classify changes into categories (Features, Fixes, Refactors, etc.)
 - Generate structured changelog entries
 - Update the README
+
+#### Star Wars Agent Personality
+The skill in `.vscode/skills/star-wars-agent-personality/SKILL.md` teaches Copilot how to:
+- Assign Star Wars character personalities to spawned subagents
+- Inject character-specific communication styles (Yoda, Han Solo, C-3PO, etc.)
+- Maintain technical accuracy while adding personality to agent interactions
+- Keep each agent in character throughout their entire execution
 
 ### Prompts
 | Prompt | What It Does |
@@ -56,6 +70,7 @@ The skill in `.vscode/skills/readme-changelog-generator/SKILL.md` teaches Copilo
 | `generate-change-readme` | Analyzes recent commits and generates a changelog entry |
 | `summarize-changes` | Finds all changes since the last changelog entry |
 | `generate-full-readme` | Creates a complete README from the current repo state |
+| `enable-star-wars-agents` | Activates Star Wars character personalities for all subagents |
 
 ### Instructions
 | File | Scope |

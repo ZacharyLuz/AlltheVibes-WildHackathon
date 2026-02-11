@@ -1,5 +1,19 @@
 # Changelog
 
+## [2026-02-10] — Star Wars Agent Personality Feature
+
+### 🆕 New Features
+- **.vscode/skills/star-wars-agent-personality/SKILL.md**: Add Star Wars Agent Personality skill that assigns character personalities (Yoda, Han Solo, C-3PO, etc.) to spawned subagents
+- **.github/prompts/enable-star-wars-agents.prompt.md**: Add prompt to activate Star Wars character personalities for all subagents
+
+### 📝 Documentation
+- **README.md**: Update project structure to include new Star Wars skill and prompt
+- **README.md**: Expand Copilot Skills section to document both skills
+- **README.md**: Add enable-star-wars-agents to prompts table
+- **.github/copilot-instructions.md**: Add Star Wars skill and prompt to File Conventions table
+
+---
+
 
 ## [2026-02-10] — Changes `65b66d8` to `b3855fc`
 
