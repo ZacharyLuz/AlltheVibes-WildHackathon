@@ -1,6 +1,25 @@
 # Changelog
 
 
+## [2026-02-11] — Changes `937d112` to `e5b7a12`
+
+### 📦 Other
+- Refresh README with repo research and quick-start guidance (#33)
+
+<details><summary>Files changed</summary>
+
+```
+ Backlog.md | 13 +++++----
+ README.md  | 96 ++++++++++++++++++++++++++++++++++++++++++++++++--------------
+ 2 files changed, 81 insertions(+), 28 deletions(-)
+```
+</details>
+
+---
+
+
+
+
 ## [2026-02-11] — Changes `abf9ada` to `067e370`
 
 ### 📦 Other

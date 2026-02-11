@@ -307,7 +307,7 @@ The tool is automatically registered and available to the agent — no other cha
 
 ## Recent Changes
 
-See [CHANGELOG.md](CHANGELOG.md) for the latest updates.
+See [CHANGELOG.md](CHANGELOG.md) for a full history of changes.
 
 ## Contributing
 
