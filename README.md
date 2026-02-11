@@ -79,6 +79,36 @@ AI Agent running **locally** via **Ollama** — no API keys, no cloud, fully pri
                  🐝 THE SWARM IS ALIVE. PUSH YOUR CODE. TRUST THE VIBES. 🐝
 ```
 
+## Overview
+
+- Local **Ollama CLI agent** (`agent.py`) with tool calling (shell, file I/O, web search, roasts) and rich console UI.
+- Azure-powered **agent router** (`main.py`) that fans out to Repo Copilot, Commit Whisperer, Chaos Visualizer, Code Reviewer, and SQL Generator modules in `agents/`.
+- Standalone **vibe/comedy utilities**: `vibe_oracle.py`, `swarm_chaos.py`, `sharkbait/` (ocean-themed reviewer), `ComedyArena/`, `DadJokes/`, `KnockKnock/`, and `emoji-translator/`.
+- **Research + prototypes**: `docs/research/` (3IQ and swarm architecture), `docs/plans/`, and a TypeScript agent framework prototype in `src/` (BaseAgent, message bus, Redis/OpenAI stubs).
+
+## Prerequisites
+
+- Python 3.10+ and `pip`
+- **Ollama** running locally with a tool-calling model (e.g., `qwen2.5:7b`) for the offline CLI agent
+- **Azure OpenAI** (for `agents/*` utilities): set `ENDPOINT_URL`, `AZURE_OPENAI_API_KEY`, and `DEPLOYMENT_NAME`; install `azure-identity` and `openai` if not already available
+
+## Quick Start (under 5 minutes)
+
+1. Create env + install deps: `python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt` (add `pip install azure-identity openai` for Azure agents)
+2. Start Ollama and pull a model: `ollama serve` (macOS auto-starts) then `ollama pull qwen2.5:7b`
+3. Run offline CLI agent: `python agent.py`
+4. For Azure utilities, set `ENDPOINT_URL`, `AZURE_OPENAI_API_KEY`, and `DEPLOYMENT_NAME` (or rely on Entra ID), then run `python main.py router` (or `readme`, `whisper`, `visualize`, `review <file>`, `sql "<query>"`)
+5. Other demos: `python sharkbait/agent_sharkbait.py --patrol`, `python swarm_chaos.py`, `python vibe_oracle.py "question"`, `python ComedyArena/comedy_arena.py`, `python emoji-translator/src/emoji_translator.py "text"`
+
+## Running the agents and tools
+
+- **Offline (Ollama)**: `python agent.py` for the local CLI with shell/files/web/roast tools.
+- **Azure utilities** (Repo Copilot, Commit Whisperer, Chaos Visualizer, Code Reviewer, SQL Generator): `python main.py router` (or `readme`, `whisper`, `visualize`, `review <file>`, `sql "<query>"`) after setting Azure env vars.
+- **Vibe/chaos utilities**: `python swarm_chaos.py`, `python vibe_oracle.py "question"`, `python swarm_mascot.py --static`.
+- **Code review shark**: `python sharkbait/agent_sharkbait.py --patrol` (or `--roast <file>`).
+- **Comedy showdown**: `python ComedyArena/comedy_arena.py` (uses `.env.example` for Azure OpenAI); `DadJokes/` and `KnockKnock/` run similarly.
+- **Emoji translator**: `python emoji-translator/src/emoji_translator.py "text"` (optionally set `OPENAI_API_KEY` for enhanced mode).
+
 ## What it does
 
 ### CLI Agent (Ollama)
@@ -231,6 +261,19 @@ tools.py                    — Tool registry and implementations
     └── macgyver/SKILL.md   — Reusable MacGyver methodology skill
 ```
 
+## Project Structure
+
+- `main.py` — router CLI to Repo Copilot, Commit Whisperer, Chaos Visualizer, Code Reviewer, SQL Generator
+- `agent.py` — local Ollama loop with calculator/shell/read/write/web/roast tools
+- `agents/` — Azure-powered modules for routing, README generation, commit narration, chaos viz, reviews, and SQL (uses `config.py` + Azure OpenAI)
+- `ComedyArena/`, `DadJokes/`, `KnockKnock/` — standalone joke agents with their own README and `.env.example`
+- `emoji-translator/` — emoji translation agent with quick start + docs
+- `sharkbait/` — ocean-themed code review agent with patrol/roast modes
+- `vibe_oracle.py`, `swarm_chaos.py`, `swarm_mascot.py` — vibe/chaos generators for the swarm
+- `docs/research/`, `docs/plans/` — 3IQ framework research and MacGyver design notes
+- `src/` — TypeScript agent framework prototype (BaseAgent, WorkerAgent, message bus, Redis/OpenAI stubs; no package/tsconfig yet)
+- `Backlog.md`, `AGENTS.md`, `REPO_STRUCTURE.md` — workflow/orientation docs
+
 ### How the CLI agentic loop works
 
 1. User sends a message
@@ -261,3 +304,12 @@ def my_tool(arg1: str) -> str:
 ```
 
 The tool is automatically registered and available to the agent — no other changes needed.
+
+## Recent Changes
+
+See [CHANGELOG.md](CHANGELOG.md) for the latest updates.
+
+## Contributing
+
+- Track active work in beads (`bd`) and record completions in `Backlog.md` (see [AGENTS.md](AGENTS.md)).
+- Keep internal links relative, maintain the Quick Start and Project Structure sections, and prefer minimal changes per PR.
