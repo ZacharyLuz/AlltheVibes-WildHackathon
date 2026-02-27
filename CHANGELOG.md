@@ -1,6 +1,24 @@
 # Changelog
 
 
+## [2026-02-27] — Changes `6f366d0` to `8bf09d8`
+
+### 📝 Documentation
+- docs: rewrite README to accurately reflect codebase
+
+<details><summary>Files changed</summary>
+
+```
+ README.md | 477 +++++++++++++++++++++++---------------------------------------
+ 1 file changed, 179 insertions(+), 298 deletions(-)
+```
+</details>
+
+---
+
+
+
+
 ## [2026-02-11] — Changes `937d112` to `e5b7a12`
 
 ### 📦 Other
